@@ -8,12 +8,16 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24)
+    }
 
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
 
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   useEffect(() => {
@@ -36,19 +40,19 @@ export function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="flex min-w-0 items-center"
+          className="flex min-w-0 shrink-0 items-center"
           aria-label="Standard Cooling & Air Conditioning - Home"
         >
           <img
             src={logo}
             alt="Standard Cooling & Air Conditioning"
-            className="h-14 w-auto object-contain"
+            className="h-14 w-auto max-w-[220px] object-contain"
           />
         </a>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden items-center gap-6 xl:flex"
+          className="hidden items-center gap-6 lg:flex"
           aria-label="Primary"
         >
           {navLinks.map((link) => (
@@ -66,8 +70,9 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop CTA + Mobile Menu Button */}
+        {/* Desktop CTA and Mobile Menu */}
         <div className="flex items-center gap-3">
+          {/* Get in Touch */}
           <a
             href="#contact"
             className={`hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 md:inline-flex ${
@@ -79,14 +84,15 @@ export function Navbar() {
             Get in Touch
           </a>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
-            className={`inline-flex h-11 w-11 items-center justify-center rounded-lg xl:hidden ${
+            className={`inline-flex h-11 w-11 items-center justify-center rounded-lg lg:hidden ${
               scrolled || open ? 'text-navy-dark' : 'text-white'
             }`}
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => setOpen((value) => !value)}
           >
             {open ? (
               <X className="h-6 w-6" />
@@ -99,7 +105,7 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`overflow-hidden transition-[max-height,opacity] duration-300 xl:hidden ${
+        className={`overflow-hidden transition-[max-height,opacity] duration-300 lg:hidden ${
           open
             ? 'max-h-[100svh] opacity-100'
             : 'pointer-events-none max-h-0 opacity-0'
@@ -122,6 +128,7 @@ export function Navbar() {
             </a>
           ))}
 
+          {/* Mobile Get in Touch */}
           <a
             href="#contact"
             onClick={() => setOpen(false)}
@@ -130,6 +137,7 @@ export function Navbar() {
             Get in Touch
           </a>
 
+          {/* Mobile Call Now */}
           <a
             href={company.phoneHref}
             className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-semibold text-navy-dark"
