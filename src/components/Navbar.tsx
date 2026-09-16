@@ -30,10 +30,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur-md transition-all duration-500 ${
         scrolled || open
-          ? 'border-b border-line/80 bg-white/95 shadow-[0_10px_30px_rgba(7,26,43,0.08)] backdrop-blur-md'
-          : 'bg-transparent'
+          ? 'shadow-[0_10px_30px_rgba(7,26,43,0.08)]'
+          : 'shadow-none'
       }`}
     >
       <div className="section-wrap section-pad flex h-[76px] items-center justify-between">
@@ -59,11 +59,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className={`text-[13px] font-medium tracking-wide transition-colors ${
-                scrolled
-                  ? 'text-navy/80 hover:text-blue'
-                  : 'text-white/80 hover:text-white'
-              }`}
+              className="text-[13px] font-medium tracking-wide text-navy/80 transition-colors hover:text-blue"
             >
               {link.label}
             </a>
@@ -75,11 +71,7 @@ export function Navbar() {
           {/* Get in Touch */}
           <a
             href="#contact"
-            className={`hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 md:inline-flex ${
-              scrolled
-                ? 'bg-navy-dark text-white hover:bg-blue'
-                : 'bg-cyan text-navy-dark hover:bg-white'
-            }`}
+            className="hidden items-center gap-2 rounded-full bg-navy-dark px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-blue md:inline-flex"
           >
             Get in Touch
           </a>
@@ -87,9 +79,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className={`inline-flex h-11 w-11 items-center justify-center rounded-lg lg:hidden ${
-              scrolled || open ? 'text-navy-dark' : 'text-white'
-            }`}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-navy-dark lg:hidden"
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((value) => !value)}
