@@ -61,7 +61,7 @@ export function Contact() {
 
                 {card.phone ? (
                   <a
-                    href={`tel:${card.phone.replace(/\s/g, '')}`}
+                    href={card.phoneHref ?? `tel:${card.phone.replace(/\s/g, '')}`}
                     className="mt-2 inline-flex items-center gap-2 text-sm text-navy hover:text-blue"
                   >
                     <Phone className="h-4 w-4 text-blue" />
@@ -72,7 +72,7 @@ export function Contact() {
                 <div className="mt-auto flex flex-wrap gap-2 pt-6">
                   {card.showCall && card.phone ? (
                     <a
-                      href={`tel:${card.phone.replace(/\s/g, '')}`}
+                      href={card.phoneHref ?? `tel:${card.phone.replace(/\s/g, '')}`}
                       className="rounded-full bg-navy-dark px-4 py-2 text-xs font-semibold text-white"
                     >
                       Call Us

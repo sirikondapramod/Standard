@@ -75,11 +75,25 @@ export function Footer() {
 
               <li>
                 <a
-                  href={company.phoneHref}
+                  href="tel:+919849198700"
                   className="flex items-center gap-2 hover:text-white"
                 >
                   <Phone className="h-4 w-4 text-cyan" />
-                  {company.phone}
+                  <span>
+                    Naresh Sirikonda: +91 9849198700
+                  </span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="tel:+919177269771"
+                  className="flex items-center gap-2 hover:text-white"
+                >
+                  <Phone className="h-4 w-4 text-cyan" />
+                  <span>
+                    Suresh Kelleti: +91 9177269771
+                  </span>
                 </a>
               </li>
             </ul>

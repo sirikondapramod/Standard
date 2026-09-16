@@ -22,12 +22,22 @@ export const contacts: ContactCard[] = [
       'Hyderabad, Telangana – 500016',
     ],
     email: 'coolingstandard@gmail.com',
+    mapsQuery:
+      'https://maps.app.goo.gl/8MnyrnGWo5opC4NLA',
+    showCall: false,
+    showEmail: true,
+  },
+  {
+    id: 'naresh',
+    title: 'Naresh Sirikonda',
+    role: 'Operations Lead',
+    lines: [],
     phone: '+91 9849198700',
     phoneHref: 'tel:+919849198700',
     mapsQuery:
       'https://maps.app.goo.gl/8MnyrnGWo5opC4NLA',
     showCall: true,
-    showEmail: true,
+    showEmail: false,
   },
   {
     id: 'suresh',
