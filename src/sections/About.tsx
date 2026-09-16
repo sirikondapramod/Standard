@@ -6,18 +6,18 @@ import { images } from '../data/site'
 const features = [
   {
     icon: Users,
-    title: 'Experienced Team',
-    text: 'Trained sales, service and project professionals.',
+    title: 'Trained Professionals',
+    text: 'Experienced Sales & Service Engineers supporting projects and maintenance.',
   },
   {
     icon: Leaf,
-    title: 'Energy-Focused',
-    text: 'Retrofit and redesign solutions focused on improved efficiency.',
+    title: 'Energy Saving & Retrofit',
+    text: 'Retrofit and redesign solutions using energy-efficient products.',
   },
   {
     icon: ShieldCheck,
-    title: 'Customer First',
-    text: 'Solutions designed around actual operational requirements.',
+    title: 'Quality & Customer Focus',
+    text: 'Quality products, services and solutions designed around customer requirements.',
   },
 ]
 
@@ -28,11 +28,13 @@ export function About() {
         <Reveal>
           <div className="relative">
             <div className="absolute -top-4 -left-4 h-24 w-24 rounded-2xl border border-cyan/40" />
+
             <img
               src={images.about}
               alt="Engineer reviewing industrial plant systems in a mechanical facility"
               className="relative z-10 h-[420px] w-full rounded-3xl object-cover shadow-[0_30px_60px_rgba(7,26,43,0.18)] sm:h-[520px]"
             />
+
             <div className="absolute right-5 -bottom-6 z-20 max-w-[240px] rounded-2xl bg-navy-dark p-5 text-white shadow-xl">
               <p className="text-[10px] font-semibold tracking-[0.22em] text-cyan uppercase">
                 Authorized Channel Partners
@@ -47,19 +49,25 @@ export function About() {
         <Reveal delay={0.1}>
           <SectionHeader
             label="About Standard Cooling"
-            heading="Engineering Experience. Built Around Your Needs."
+            heading="Project Services & The Retrofit Specialists."
           />
+
           <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted sm:text-base">
             <p>
-              With extensive experience in the HVAC industry, Standard Cooling & Air Conditioning is
-              committed to meeting customer requirements based on current market conditions and
-              operational needs.
+              Standard Cooling & Air Conditioning was incorporated in December 2017 by Naresh
+              Sirikonda and Suresh Kelleti. The company delivers HVAC project services,
+              maintenance, retrofit solutions and energy-efficient solutions based on customer
+              and operational requirements.
             </p>
+
             <p>
-              Standard Cooling is adequately staffed by trained Sales & Service Engineers and provides
-              HVAC maintenance, projects, retrofit solutions, energy-saving solutions and MEP services.
+              With trained Sales & Service Engineers, Standard Cooling provides HVAC and
+              refrigeration services, MEP works, project execution, retrofit solutions and
+              energy-saving solutions. The company is also an authorized channel partner for
+              the entire range of Carrier and Toshiba products.
             </p>
           </div>
+
           <div className="mt-8 grid gap-4">
             {features.map((feature) => (
               <div
@@ -69,6 +77,7 @@ export function About() {
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-light text-blue">
                   <feature.icon className="h-5 w-5" />
                 </span>
+
                 <div>
                   <h3 className="font-display font-bold text-ink">{feature.title}</h3>
                   <p className="mt-1 text-sm text-muted">{feature.text}</p>

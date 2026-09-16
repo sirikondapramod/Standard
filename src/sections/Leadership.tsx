@@ -31,19 +31,26 @@ export function Leadership() {
                     <p className="text-sm text-muted">{leader.role}</p>
                   </div>
                 </div>
-                <p className="mt-5 text-sm leading-relaxed text-muted">{leader.description}</p>
+
+                <p className="mt-5 text-sm leading-relaxed text-muted">
+                  {leader.description}
+                </p>
+
                 <div className="mt-6 border-t border-line pt-5">
                   <p className="text-[11px] font-semibold tracking-[0.2em] text-navy uppercase">
                     Experience
                   </p>
+
                   <ul className="mt-3 space-y-1.5 text-sm text-ink">
                     {leader.experience.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
+
                   <p className="mt-4 inline-flex rounded-full bg-navy-dark px-3 py-1 text-xs font-semibold text-cyan">
                     Total Experience: {leader.totalExperience}
                   </p>
+
                   {leader.expertise ? (
                     <div className="mt-5 flex flex-wrap gap-2">
                       {leader.expertise.map((item) => (

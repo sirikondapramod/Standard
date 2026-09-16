@@ -15,8 +15,8 @@ export function MissionVision() {
               <Compass className="h-8 w-8 text-blue" />
               <h3 className="font-display mt-6 text-2xl font-extrabold text-ink">Mission</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted">
-                To provide high quality, outstanding services and solutions to our customers through
-                dedication and excellence.
+                To provide high quality, outstanding services and solutions through dedication and excellence,
+  while delivering innovative solutions that meet evolving customer requirements.
               </p>
             </article>
           </Reveal>

@@ -47,11 +47,10 @@ export function RetrofitSection() {
             Make Your Existing HVAC System
             <span className="mt-2 block text-cyan">Work Smarter.</span>
           </h2>
-          <p className="mt-6 max-w-2xl text-white/70">
-            Standard Cooling specializes in energy-saving solutions through retrofit, efficient
-            equipment and redesign of existing HVAC setups based on administration, operational and
-            consultant requirements.
-          </p>
+         <p className="mt-6 max-w-2xl text-white/70">
+  Standard Cooling specializes in energy-saving solutions through retrofit, energy-efficient
+  products and redesign of existing HVAC setups based on customer and operational requirements.
+</p>
         </Reveal>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">

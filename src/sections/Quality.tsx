@@ -6,17 +6,17 @@ const pillars = [
   {
     icon: ShieldCheck,
     title: 'Quality Products',
-    text: 'Reliable equipment and components.',
+    text: 'Quality products, services and solutions selected around customer requirements.',
   },
   {
     icon: Gauge,
     title: 'Maximum Efficiency',
-    text: 'Solutions designed for improved system performance.',
+    text: 'Solutions focused on longer equipment life and maximum system efficiency.',
   },
   {
     icon: Timer,
-    title: 'Rapid Response',
-    text: 'Committed service response within 4 hours.',
+    title: '4-Hour Response',
+    text: 'Committed service response time of four hours for service requirements.',
   },
 ]
 
@@ -36,8 +36,8 @@ export function Quality() {
             Quality Without Compromise
           </h2>
           <p className="mt-5 max-w-2xl text-white/70">
-            Our basic goal is to provide quality products, services and solutions to our customers
-            with longer equipment life and maximum system efficiency.
+            Our goal is to provide quality products, services and solutions that help extend equipment
+life, maximize system efficiency and deliver dependable performance for our customers.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-5 md:grid-cols-3">

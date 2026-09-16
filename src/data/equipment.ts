@@ -10,7 +10,7 @@ export const equipmentCategories: EquipmentCategory[] = [
     title: 'Pumps',
     items: [
       'Centrifugal single-stage pumps',
-      'Multi-stage pumps',
+      'Centrifugal multi-stage pumps',
       'Dosing pumps',
       'RO pumps',
       'Submersible pumps',
@@ -34,6 +34,7 @@ export const equipmentCategories: EquipmentCategory[] = [
     id: 'tfa',
     title: 'Treated Fresh Air Units',
     items: [
+      'TFA Units',
       'Assembly',
       'Reconditioning',
       'Troubleshooting',
@@ -43,10 +44,12 @@ export const equipmentCategories: EquipmentCategory[] = [
   },
   {
     id: 'exhaust',
-    title: 'Exhaust Fans',
+    title: 'Exhaust & Ventilation',
     items: [
-      'All types of flow',
-      'Multiple capacities',
+      'Exhaust Fans',
+      'Multiple Airflow Capacities',
+      'Centrifugal Fans',
+      'Vane Axial Fans',
       'Troubleshooting',
       'Overhauling',
       'Maintenance',
@@ -54,7 +57,7 @@ export const equipmentCategories: EquipmentCategory[] = [
   },
   {
     id: 'low-capacity',
-    title: 'Low Capacity HVAC',
+    title: 'Low Capacity HVAC & Refrigeration',
     items: [
       'Package Units',
       'Split Package Units',
@@ -69,25 +72,26 @@ export const equipmentCategories: EquipmentCategory[] = [
   },
   {
     id: 'central',
-    title: 'Central HVAC',
+    title: 'Central HVAC & Chillers',
     items: [
       'Reciprocating Chillers',
       'Rotary Screw Chillers',
       'Centrifugal Chillers',
-      'Large Central Plant Applications',
+      'VRF / VRV Systems',
+      'High-Capacity HVAC Systems',
+      'Central Air Conditioning',
     ],
   },
   {
     id: 'controls',
-    title: 'Controls & Mechanical',
+    title: 'Controls & Mechanical Systems',
     items: [
       'Pneumatic Controls',
       'Electric Controls',
       'Digital Controls',
       'Boilers',
-      'Centrifugal Fans',
-      'Vane Axial Fans',
       'Commercial Refrigeration',
+      'High Static / High Capacity Ducted Systems',
     ],
   },
 ]

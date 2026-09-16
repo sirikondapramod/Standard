@@ -4,7 +4,7 @@ import { company, images } from '../data/site'
 
 const cards = [
   { value: '2017', label: 'Established' },
-  { value: '19+', label: 'Years Partner Experience' },
+  { value: 'Carrier & Toshiba', label: 'Authorized Channel Partners' },
   { value: '4 Hours', label: 'Service Response Commitment' },
   { value: '24/7', label: 'Emergency Support' },
 ]
@@ -40,8 +40,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="font-display mt-5 max-w-4xl text-5xl font-extrabold leading-[0.92] tracking-tight sm:text-6xl lg:text-[5.4rem]"
         >
-          THE RETROFIT
-          <span className="mt-2 block text-cyan">SPECIALISTS</span>
+          PROJECT SERVICES
+<span className="mt-2 block text-cyan"> & RETROFIT SPECIALISTS</span>
         </motion.h1>
 
         <motion.p
@@ -51,7 +51,7 @@ export function Hero() {
           className="font-display mt-6 max-w-xl text-xl font-semibold text-white/90 sm:text-2xl"
         >
           Engineering Better Cooling.
-          <span className="block">Delivering Greater Efficiency.</span>
+<span className="block">Delivering Energy-Efficient Solutions.</span>
         </motion.p>
 
         <motion.p
@@ -60,8 +60,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="mt-5 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base"
         >
-          Standard Cooling & Air Conditioning delivers dependable HVAC, refrigeration, retrofit and
-          energy-saving solutions designed around the operational needs of modern businesses.
+          Standard Cooling & Air Conditioning delivers HVAC, refrigeration, MEP, retrofit and
+energy-saving solutions, with project execution and maintenance services tailored to customer requirements.
         </motion.p>
 
         <motion.div

@@ -20,17 +20,25 @@ export function Footer() {
                 </p>
               </div>
             </div>
+
             <p className="mt-6 max-w-md text-sm leading-relaxed text-white/65">
-              HVAC, refrigeration, retrofit and energy-saving solutions for commercial and industrial operations in Hyderabad.
+              HVAC, refrigeration, MEP, retrofit and energy-saving solutions for
+              commercial and industrial requirements.
             </p>
           </div>
 
           <div>
-            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">Navigation</p>
+            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">
+              Navigation
+            </p>
+
             <ul className="mt-5 grid gap-2">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm text-white/70 transition-colors hover:text-white">
+                  <a
+                    href={link.href}
+                    className="text-sm text-white/70 transition-colors hover:text-white"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -39,20 +47,37 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">Contact</p>
+            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">
+              Contact
+            </p>
+
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 text-cyan" />
-                {company.city}
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-cyan" />
+                <span>
+                  18/3 PRAKASH NAGAR
+                  <br />
+                  BEGUMPET
+                  <br />
+                  Hyderabad, Telangana – 500016
+                </span>
               </li>
+
               <li>
-                <a href={company.emailHref} className="flex items-center gap-2 hover:text-white">
+                <a
+                  href={company.emailHref}
+                  className="flex items-center gap-2 hover:text-white"
+                >
                   <Mail className="h-4 w-4 text-cyan" />
                   {company.email}
                 </a>
               </li>
+
               <li>
-                <a href={company.phoneHref} className="flex items-center gap-2 hover:text-white">
+                <a
+                  href={company.phoneHref}
+                  className="flex items-center gap-2 hover:text-white"
+                >
                   <Phone className="h-4 w-4 text-cyan" />
                   {company.phone}
                 </a>

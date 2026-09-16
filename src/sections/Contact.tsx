@@ -16,9 +16,10 @@ export function Contact() {
           <SectionHeader
             label="Contact"
             heading="Let’s Keep Your Systems Running"
-            description="Talk to our team about HVAC maintenance, retrofit, energy-saving solutions or project requirements."
+            description="Talk to our team about HVAC maintenance, retrofit, energy-saving solutions, MEP works or project requirements."
           />
         </Reveal>
+
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
           {contacts.map((card, i) => (
             <Reveal key={card.id} delay={i * 0.07}>
@@ -26,10 +27,16 @@ export function Contact() {
                 <p className="text-[11px] font-semibold tracking-[0.2em] text-blue uppercase">
                   {card.id === 'office' ? 'Registered Office' : 'Partner'}
                 </p>
-                <h3 className="font-display mt-2 text-2xl font-extrabold text-ink">{card.title}</h3>
+
+                <h3 className="font-display mt-2 text-2xl font-extrabold text-ink">
+                  {card.title}
+                </h3>
+
                 {card.role ? <p className="mt-1 text-sm text-muted">{card.role}</p> : null}
+
                 <div className="mt-5 flex gap-2 text-sm leading-relaxed text-navy">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
+
                   <p>
                     {card.lines.map((line) => (
                       <span key={line} className="block">
@@ -38,6 +45,7 @@ export function Contact() {
                     ))}
                   </p>
                 </div>
+
                 {card.email ? (
                   <a
                     href={`mailto:${card.email}`}
@@ -47,6 +55,7 @@ export function Contact() {
                     {card.email}
                   </a>
                 ) : null}
+
                 {card.phone ? (
                   <a
                     href={`tel:${card.phone.replace(/\s/g, '')}`}
@@ -56,6 +65,7 @@ export function Contact() {
                     {card.phone}
                   </a>
                 ) : null}
+
                 <div className="mt-auto flex flex-wrap gap-2 pt-6">
                   {card.showCall ? (
                     <a
@@ -65,6 +75,7 @@ export function Contact() {
                       Call Us
                     </a>
                   ) : null}
+
                   {card.showEmail && card.email ? (
                     <a
                       href={`mailto:${card.email}`}
@@ -73,6 +84,7 @@ export function Contact() {
                       Email Us
                     </a>
                   ) : null}
+
                   <a
                     href={mapsHref(card.mapsQuery)}
                     target="_blank"

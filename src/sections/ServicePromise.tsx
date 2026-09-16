@@ -6,7 +6,7 @@ import { images } from '../data/site'
 const features = [
   { icon: Clock3, title: '4-Hour Response Commitment' },
   { icon: Siren, title: '24/7 Emergency Service' },
-  { icon: Users, title: 'Experienced Technicians' },
+  { icon: Users, title: 'Trained Sales & Service Engineers' },
 ]
 
 export function ServicePromise() {
@@ -24,8 +24,8 @@ export function ServicePromise() {
             When Your HVAC System Stops, Your Business Shouldn’t.
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-white/70">
-            We provide scheduled maintenance as well as emergency service support, including 24-hour
-            emergency service when required.
+            We provide scheduled maintenance, service support and 24-hour emergency assistance,
+  backed by trained Sales & Service Engineers and a committed four-hour service response.
           </p>
         </Reveal>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">

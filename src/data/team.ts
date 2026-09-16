@@ -4,11 +4,28 @@ export interface TeamGroup {
 }
 
 export const teamGroups: TeamGroup[] = [
-  { title: 'Service Engineers', detail: '4 Full-Time' },
-  { title: 'Installation Crews', detail: '2 Crews' },
-  { title: 'Supervisor', detail: '1' },
-  { title: 'Office Staff', detail: 'On-site support' },
-  { title: 'Project Engineers', detail: 'Project execution' },
-  { title: 'Trainee Technicians', detail: 'Field development' },
-  { title: 'Safety Engineer', detail: '1' },
+  {
+    title: 'Service Engineers',
+    detail: 'Trained Sales & Service Engineers',
+  },
+  {
+    title: 'Project Engineers',
+    detail: 'Project design and execution support',
+  },
+  {
+    title: 'Installation Crews',
+    detail: 'HVAC installation and project execution',
+  },
+  {
+    title: 'Technicians',
+    detail: 'HVAC service, maintenance and field support',
+  },
+  {
+    title: 'Trainee Technicians',
+    detail: 'Technical field development',
+  },
+  {
+    title: 'Office Staff',
+    detail: 'Sales, project and administrative support',
+  },
 ]

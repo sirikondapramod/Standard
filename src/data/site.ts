@@ -10,7 +10,6 @@ export const company = {
   phoneHref: 'tel:+919849198700',
   emailHref: 'mailto:coolingstandard@gmail.com',
   established: 2017,
-  combinedPartnerExperience: '35+',
 } as const
 
 export const images = {
