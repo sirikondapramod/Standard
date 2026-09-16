@@ -5,6 +5,7 @@ export interface ContactCard {
   lines: string[]
   email?: string
   phone?: string
+  phoneHref?: string
   mapsQuery: string
   showCall: boolean
   showEmail: boolean
@@ -22,9 +23,22 @@ export const contacts: ContactCard[] = [
     ],
     email: 'coolingstandard@gmail.com',
     phone: '+91 9849198700',
+    phoneHref: 'tel:+919849198700',
     mapsQuery:
-      '18/3 PRAKASH NAGAR, BEGUMPET, Hyderabad, Telangana 500016',
+      'https://maps.app.goo.gl/8MnyrnGWo5opC4NLA',
     showCall: true,
     showEmail: true,
+  },
+  {
+    id: 'suresh',
+    title: 'Suresh Kelleti',
+    role: 'Project Design / Sales & Projects',
+    lines: [],
+    phone: '+91 9177269771',
+    phoneHref: 'tel:+919177269771',
+    mapsQuery:
+      'https://maps.app.goo.gl/8MnyrnGWo5opC4NLA',
+    showCall: true,
+    showEmail: false,
   },
 ]

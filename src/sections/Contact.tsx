@@ -2,7 +2,6 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 import { Reveal } from '../components/Reveal'
 import { SectionHeader } from '../components/SectionHeader'
 import { contacts } from '../data/contact'
-import { company } from '../data/site'
 
 function mapsHref(query: string) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
@@ -32,19 +31,23 @@ export function Contact() {
                   {card.title}
                 </h3>
 
-                {card.role ? <p className="mt-1 text-sm text-muted">{card.role}</p> : null}
+                {card.role ? (
+                  <p className="mt-1 text-sm text-muted">{card.role}</p>
+                ) : null}
 
-                <div className="mt-5 flex gap-2 text-sm leading-relaxed text-navy">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
+                {card.lines.length > 0 ? (
+                  <div className="mt-5 flex gap-2 text-sm leading-relaxed text-navy">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
 
-                  <p>
-                    {card.lines.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </p>
-                </div>
+                    <p>
+                      {card.lines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                ) : null}
 
                 {card.email ? (
                   <a
@@ -67,9 +70,9 @@ export function Contact() {
                 ) : null}
 
                 <div className="mt-auto flex flex-wrap gap-2 pt-6">
-                  {card.showCall ? (
+                  {card.showCall && card.phone ? (
                     <a
-                      href={company.phoneHref}
+                      href={`tel:${card.phone.replace(/\s/g, '')}`}
                       className="rounded-full bg-navy-dark px-4 py-2 text-xs font-semibold text-white"
                     >
                       Call Us
